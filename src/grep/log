@@ -1,0 +1,252 @@
+==19103== Memcheck, a memory error detector
+==19103== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==19103== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==19103== Command: ./s21_grep -o -f s21_grep.c s21_grep.c
+==19103== Parent PID: 18570
+==19103== 
+==19103== 
+==19103== Process terminating with default action of signal 2 (SIGINT)
+==19103==    at 0x4F332B0: build_trtable (regexec.c:3407)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== HEAP SUMMARY:
+==19103==     in use at exit: 6,748 bytes in 62 blocks
+==19103==   total heap usage: 19,586,879 allocs, 19,586,817 frees, 4,082,487,692 bytes allocated
+==19103== 
+==19103== 4 bytes in 1 blocks are still reachable in loss record 1 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F32472: re_node_set_init_copy (regex_internal.c:1023)
+==19103==    by 0x4F32472: create_cd_newstate (regex_internal.c:1662)
+==19103==    by 0x4F32472: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F399D5: create_initial_state (regcomp.c:1043)
+==19103==    by 0x4F399D5: re_compile_internal (regcomp.c:804)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 4 bytes in 1 blocks are still reachable in loss record 2 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F2C202: re_node_set_alloc (regex_internal.c:963)
+==19103==    by 0x4F2C202: register_state (regex_internal.c:1555)
+==19103==    by 0x4F3263C: create_cd_newstate (regex_internal.c:1714)
+==19103==    by 0x4F3263C: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F399D5: create_initial_state (regcomp.c:1043)
+==19103==    by 0x4F399D5: re_compile_internal (regcomp.c:804)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 4 bytes in 1 blocks are still reachable in loss record 3 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F334F5: re_node_set_init_1 (regex_internal.c:975)
+==19103==    by 0x4F334F5: group_nodes_into_DFAstates (regexec.c:3652)
+==19103==    by 0x4F334F5: build_trtable (regexec.c:3293)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 4 bytes in 1 blocks are still reachable in loss record 4 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F32472: re_node_set_init_copy (regex_internal.c:1023)
+==19103==    by 0x4F32472: create_cd_newstate (regex_internal.c:1662)
+==19103==    by 0x4F32472: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F331B9: build_trtable (regexec.c:3363)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 4 bytes in 1 blocks are still reachable in loss record 5 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F2C202: re_node_set_alloc (regex_internal.c:963)
+==19103==    by 0x4F2C202: register_state (regex_internal.c:1555)
+==19103==    by 0x4F3263C: create_cd_newstate (regex_internal.c:1714)
+==19103==    by 0x4F3263C: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F331B9: build_trtable (regexec.c:3363)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 8 bytes in 1 blocks are still reachable in loss record 6 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F32987: re_node_set_alloc (regex_internal.c:963)
+==19103==    by 0x4F32987: build_trtable (regexec.c:3310)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 16 bytes in 1 blocks are still reachable in loss record 7 of 20
+==19103==    at 0x4C31A3F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4C33D84: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F2C2FD: register_state (regex_internal.c:1570)
+==19103==    by 0x4F3263C: create_cd_newstate (regex_internal.c:1714)
+==19103==    by 0x4F3263C: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F399D5: create_initial_state (regcomp.c:1043)
+==19103==    by 0x4F399D5: re_compile_internal (regcomp.c:804)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 16 bytes in 1 blocks are still reachable in loss record 8 of 20
+==19103==    at 0x4C31A3F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4C33D84: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F2C2FD: register_state (regex_internal.c:1570)
+==19103==    by 0x4F3263C: create_cd_newstate (regex_internal.c:1714)
+==19103==    by 0x4F3263C: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F331B9: build_trtable (regexec.c:3363)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 88 bytes in 1 blocks are still reachable in loss record 9 of 20
+==19103==    at 0x4C33B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F3242A: create_cd_newstate (regex_internal.c:1659)
+==19103==    by 0x4F3242A: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F399D5: create_initial_state (regcomp.c:1043)
+==19103==    by 0x4F399D5: re_compile_internal (regcomp.c:804)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 88 bytes in 1 blocks are still reachable in loss record 10 of 20
+==19103==    at 0x4C33B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F3242A: create_cd_newstate (regex_internal.c:1659)
+==19103==    by 0x4F3242A: re_acquire_state_context (regex_internal.c:1534)
+==19103==    by 0x4F331B9: build_trtable (regexec.c:3363)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 172 bytes in 1 blocks are still reachable in loss record 11 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F38E30: analyze (regcomp.c:1151)
+==19103==    by 0x4F38E30: re_compile_internal (regcomp.c:793)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 172 bytes in 43 blocks are still reachable in loss record 12 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F316DA: re_node_set_alloc (regex_internal.c:963)
+==19103==    by 0x4F316DA: calc_eclosure_iter (regcomp.c:1682)
+==19103==    by 0x4F39683: calc_eclosure (regcomp.c:1659)
+==19103==    by 0x4F39683: analyze (regcomp.c:1186)
+==19103==    by 0x4F39683: re_compile_internal (regcomp.c:793)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 224 bytes in 1 blocks are still reachable in loss record 13 of 20
+==19103==    at 0x4C31A3F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4C33D84: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F39C4B: re_compile_internal (regcomp.c:749)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 256 bytes in 1 blocks are still reachable in loss record 14 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F3F239: regcomp (regcomp.c:479)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 552 bytes in 1 blocks are still reachable in loss record 15 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4EBCDF9: __fopen_internal (iofopen.c:65)
+==19103==    by 0x4EBCDF9: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==19103==    by 0x108DB4: processing (s21_grep.c:69)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 688 bytes in 1 blocks are still reachable in loss record 16 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F3886B: init_dfa (regcomp.c:841)
+==19103==    by 0x4F3886B: re_compile_internal (regcomp.c:757)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 688 bytes in 1 blocks are still reachable in loss record 17 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F38E50: analyze (regcomp.c:1153)
+==19103==    by 0x4F38E50: re_compile_internal (regcomp.c:793)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 688 bytes in 1 blocks are still reachable in loss record 18 of 20
+==19103==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F38E5F: analyze (regcomp.c:1154)
+==19103==    by 0x4F38E5F: re_compile_internal (regcomp.c:793)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 1,024 bytes in 1 blocks are still reachable in loss record 19 of 20
+==19103==    at 0x4C33B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F3889F: init_dfa (regcomp.c:848)
+==19103==    by 0x4F3889F: re_compile_internal (regcomp.c:757)
+==19103==    by 0x4F3F2A1: regcomp (regcomp.c:498)
+==19103==    by 0x1094DE: processing_row (s21_grep.c:158)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== 2,048 bytes in 1 blocks are still reachable in loss record 20 of 20
+==19103==    at 0x4C33B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19103==    by 0x4F3325F: build_trtable (regexec.c:3398)
+==19103==    by 0x4F3E027: transit_state (regexec.c:2253)
+==19103==    by 0x4F3E027: check_matching (regexec.c:1118)
+==19103==    by 0x4F3E027: re_search_internal (regexec.c:790)
+==19103==    by 0x4F3F699: regexec@@GLIBC_2.3.4 (regexec.c:220)
+==19103==    by 0x109543: processing_row (s21_grep.c:162)
+==19103==    by 0x108F0C: processing (s21_grep.c:82)
+==19103==    by 0x108CF7: main (s21_grep.c:56)
+==19103== 
+==19103== LEAK SUMMARY:
+==19103==    definitely lost: 0 bytes in 0 blocks
+==19103==    indirectly lost: 0 bytes in 0 blocks
+==19103==      possibly lost: 0 bytes in 0 blocks
+==19103==    still reachable: 6,748 bytes in 62 blocks
+==19103==         suppressed: 0 bytes in 0 blocks
+==19103== 
+==19103== For counts of detected and suppressed errors, rerun with: -v
+==19103== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
